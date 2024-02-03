@@ -1,1 +1,8 @@
-# clo835-assignment1-tf
+# Terraform code to deploy EC2, ECR, and ALB
+
+
+```
+terraform init
+terraform plan
+terraform apply
+```
