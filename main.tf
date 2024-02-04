@@ -46,13 +46,13 @@ resource "aws_instance" "this" {
   EOF
 
   tags = {
-    Name = "asgmt1-vm"
+    Name = "assignmentvm"
   }
 }
 
 # Create ECR Repository
 resource "aws_ecr_repository" "web" {
-  name = "webapp"
+  name = "web-app"
 }
 
 resource "aws_ecr_repository" "sql" {
@@ -74,12 +74,12 @@ data "aws_subnets" "default" {
 
 # Create ALB
 resource "aws_lb" "this" {
-  name               = "asgmt1-alb"
+  name               = "assignment-alb"
   load_balancer_type = "application"
   subnets            = data.aws_subnets.default.ids
 
   tags = {
-    Name = "asgmt1-alb"
+    Name = "assignment-alb"
   }
 }
 
