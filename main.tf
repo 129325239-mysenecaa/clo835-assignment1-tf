@@ -52,7 +52,7 @@ resource "aws_instance" "this" {
 
 # Create ECR Repository
 resource "aws_ecr_repository" "web" {
-  name = "web-app"
+  name = "webapp"
 }
 
 resource "aws_ecr_repository" "sql" {
